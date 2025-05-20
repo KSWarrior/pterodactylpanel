@@ -7,7 +7,7 @@ original_dir=$(pwd)
 sudo bash -c '
 # Install required packages
 apt update && apt upgrade -y
-apt install docker-compose
+apt install docker-compose -y
 
 # Start the containers in detached mode
 cd pterodactyl/panel
