@@ -6,9 +6,9 @@ services:
     networks:
       - wings0
     ports:
-      - "8085:8080"  # Web panel HTTP
-      - "2025:2022"  # SFTP / remote command port
-      - "8443:443"   # HTTPS panel
+      - "8085:8080"
+      - "2025:2022"
+      - "8443:443"
     tty: true
     environment:
       TZ: "UTC"
