@@ -1,4 +1,4 @@
-name: Pterodactyl Panel 5
+name: Pterodactyl Panel
 
 on:
   workflow_dispatch:
