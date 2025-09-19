@@ -84,6 +84,12 @@ jobs:
           tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}' || true
           sleep 500
 
+      # 6. Keep Panel Alive
+      - name: Keep Alive
+        run: |
+          echo "⏳ Keeping panel alive for 20000 seconds..."
+          sleep 20000
+          
       # 7. Create Backup
       - name: Backup Panel Data
         if: always()
