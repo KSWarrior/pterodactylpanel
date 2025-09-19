@@ -65,6 +65,13 @@ jobs:
           cloudflared --version
           sudo cloudflared service install eyJhIjoiZTJkZjY3MDI5ZWZlZTBmY2JhM2ExMjNjN2VmNTcxNTAiLCJ0IjoiYTNkM2Y0YTctMTg5OS00YWRlLWE2ZWEtMDZjYTk3YjNiNzM0IiwicyI6Ik9HWm1ZemxtTkdJdFpXUXhPUzAwTmpFeExUazFaR1V0TnpCak5qTmpOVE15TURBeiJ9
 
+      # 4. Start Pterodactyl Panel
+      - name: Start Panel
+        run: |
+          cd /ks/pterodactyl/panel
+          docker-compose up -d
+          echo "✅ Pterodactyl Panel started."
+          
       # 6. Keep Panel Alive
       - name: Start Tmate (for debug - non-blocking)
         if: always()
